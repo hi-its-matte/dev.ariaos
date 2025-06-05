@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aria Devs - Join Our Team</title>
+  <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon" /> <style>
+    :root {
+      --primary-color: #11a5bf;
+      --primary-hover-color: #0dc2e1;
+      --secondary-color: #f0f0f0;
+      --text-color: #333;
+      --background-gradient-start: #c4f2f0;
+      --background-gradient-end: #0dc2e1;
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --box-shadow: 0 4px 10px #000000;
+      --border-radius: 8px;
+      --animation-duration: 0.8s;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background: linear-gradient(to bottom, var(--background-gradient-start), var(--background-gradient-end));
+      color: var(--text-color);
+      line-height: 1.6;
+      overflow-x: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px; /* Added padding for smaller screens */
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--box-shadow);
+      border-radius: var(--border-radius);
+      padding: 2rem;
+      width: 100%;
+      max-width: 1000px;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn var(--animation-duration) forwards;
+      max-height: 95vh; /* Limit height for scrolling */
+      overflow-y: auto; /* Enable scrolling if content is too long */
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: var(--primary-color);
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 0.5rem;
+      display: inline-block; /* To make the border only under the text */
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-align: left; /* Align text to the left for better readability */
+      line-height: 1.8;
+    }
+
+    ul {
+      list-style: disc;
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: left; /* Align list to the left */
+    }
+
+    li {
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: var(--border-radius);
+      text-decoration: none;
+      color: white;
+      background-color: var(--primary-color);
+      transition: background-color 0.3s ease;
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-hover-color);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: var(--text-color);
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: var(--border-radius);
+      font-family: var(--font-family);
+      font-size: 1rem;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-group button[type="submit"] {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 1rem 2rem;
+      border-radius: var(--border-radius);
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+      width: auto; /* Reset width for the button */
+    }
+
+    .form-group button[type="submit"]:hover {
+      background-color: var(--primary-hover-color);
+    }
+
+    .social-wrapper {
+        display: flex;
+        justify-content: center; /* Center social buttons */
+        margin-top: 1.5rem;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        background: linear-gradient(90deg, #7289da 0%, #09ba4a 100%);
+        max-width: 400px; /* Limit social wrapper width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-btn {
+        flex: 1;
+        padding: 0.8rem;
+        font-size: 1rem;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        background: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    .social-btn:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+        }
+        p, li {
+            font-size: 1rem;
+        }
+        .container {
+            padding: 1.5rem;
+        }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1>Join the Aria Development Team!</h1>
+    <p>
+      We are a passionate team with a mission: to create lightweight, fast, and accessible operating systems for everyone.
+      If you love technology, programming, and want to make a difference, you're in the right place.
+    </p>
+
+    <h2>Our Vision</h2>
+    <p>
+      We believe that quality software should be available for every type of hardware, from older PCs to modern systems.
+      Our goal is to provide a fluid and intuitive user experience while promoting open source and collaboration.
+    </p>
+
+    <h2>What We're Looking For developers</h2>
+    <p>We are looking for developers with experience or great enthusiasm in:</p>
+    <ul>
+      <li>**Linux Kernel Development:** To optimize performance and hardware compatibility.</li>
+      <li>**Desktop Environment Development (LXQt, GNOME, XFCE, etc.):** To improve the user interface and visual experience.</li>
+      <li>**Scripting (Bash, Python):** For automating installation and configuration processes.</li>
+      <li>**Software Packaging (Debian/Ubuntu):** For managing and integrating applications.</li>
+      <li>**UX/UI Design:** To create intuitive and appealing interfaces.</li>
+      <li>**Technical Documentation:** To write clear guides and manuals for users and other developers.</li>
+    </ul>
+
+    <h2>How to Contribute</h2>
+    <p>There are several ways to join the community and contribute to the Aria project:</p>
+    <ul>
+      <li>**Join Our Discord:** Our community is the heart of the project. Discuss ideas, ask for support, and share your knowledge.</li>
+      <li>**Contribute Code:** Our repositories are open. Submit pull requests, report bugs, and help improve the code.</li>
+      <li>**Test Beta Versions:** Your feedback is invaluable for identifying bugs and suggesting improvements before each release.</li>
+      <li>**Create Documentation:** Help make Aria more accessible by writing or improving documentation.</li>
+    </ul>
+
+    <h2>Contact Us</h2>
+    <p>
+      If you are interested in joining the team or have specific questions, please fill out the form below or contact us through our social channels.
+      We look forward to hearing from you!
+    </p>
+
+    <form action="https://formspree.io/f/xzzgzwvd" method="POST">
+      <div class="form-group">
+        <label for="dev_email">Your email:</label>
+        <input type="email" id="dev_email" name="email" placeholder="name@example.com" required>
+      </div>
+      <div class="form-group">
+        <label for="dev_name">Name (optional):</label>
+        <input type="text" id="dev_name" name="name" placeholder="Your name">
+      </div>
+       <div class="form-group">
+        <label for="dev_skills">Your skills/areas of interest:</label>
+        <textarea id="dev_skills" name="skills" rows="5" placeholder="e.g., Kernel Development, Python, UX Design..." required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="dev_message">Your message:</label>
+        <textarea id="dev_message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn">Send Your Application</button>
+      </div>
+    </form>
+    <div class="social-wrapper">
+      <a href="https://discord.com/invite/AeSAHmEuNZ" target="_blank" class="social-btn">Discord</a>
+      <a href="https://whatsapp.com/channel/0029Vb5xnGNC3LB4zR8p37" target="_blank" class="social-btn">WhatsApp</a>
+    </div>
+
+   
+  </main>
+</body>
+
+</html>
