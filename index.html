@@ -160,46 +160,63 @@
       background-color: var(--primary-hover-color);
     }
 
+   /* Wrapper unico per i pulsanti social */
     .social-wrapper {
-        display: flex;
-        justify-content: center; /* Center social buttons */
-        margin-top: 1.5rem;
-        border-radius: var(--border-radius);
-        overflow: hidden;
-        background: linear-gradient(90deg, #7289da 0%, #09ba4a 100%);
-        max-width: 400px; /* Limit social wrapper width */
-        margin-left: auto;
-        margin-right: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 10px; /* Spazio tra i pulsanti */
+      margin-top: 1.5rem;
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      box-shadow: none; /* Niente ombra sul wrapper */
+      background-color: transparent; /* Fondo trasparente tra i pulsanti */
     }
 
+    /* Pulsante social generico */
     .social-btn {
-        flex: 1;
-        padding: 0.8rem;
-        font-size: 1rem;
-        text-align: center;
-        color: white;
-        text-decoration: none;
-        background: transparent;
-        transition: background-color 0.3s ease;
+      padding: 0.6rem;
+      font-size: 0.9rem;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      /* Transizioni solo per background e box-shadow */
+      transition: background-color 0.3s ease, background-image 0.3s ease, box-shadow 0.3s ease;
+      font-weight: 600;
+      user-select: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--border-radius);
+      box-shadow: none; /* Niente ombra di base sui pulsanti */
     }
 
     .social-btn:hover {
-        background-color: rgba(255, 255, 255, 0.1);
+      /* filter: none; Rimosso il filter brightness */
+      /* transform: translateY(-3px); Rimosso il sollevamento */
+      box-shadow: var(--hover-box-shadow); /* Ombra solo all'hover */
+      cursor: pointer;
+      z-index: 1; /* Assicura che il pulsante hover sia sopra */
     }
 
-    @media (max-width: 768px) {
-        h1 {
-            font-size: 2rem;
-        }
-        h2 {
-            font-size: 1.6rem;
-        }
-        p, li {
-            font-size: 1rem;
-        }
-        .container {
-            padding: 1.5rem;
-        }
+    /* Discord */
+    .social-btn.discord {
+      background-color: #7289da;
+    }
+
+    /* GitHub */
+    .social-btn.github {
+      background-color: #000000;
+    }
+
+  
+
+    .red {
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 1rem;
+      border: 1px solid #f5c6cb;
+      border-radius: var(--border-radius);
+      margin-top: 1rem;
     }
   </style>
 </head>
@@ -265,9 +282,9 @@
         <button type="submit" class="btn">Send Your Application</button>
       </div>
     </form>
-    <div class="social-wrapper">
-      <a href="https://discord.com/invite/AeSAHmEuNZ" target="_blank" class="social-btn">Discord</a>
-      <a href="https://whatsapp.com/channel/0029Vb5xnGNC3LB4zR8p37" target="_blank" class="social-btn">WhatsApp</a>
+   <div class="social-wrapper">
+      <a href="https://discord.com/invite/AeSAHmEuNZ" target="_blank" class="social-btn discord">Discord</a>
+      <a href="https://github.com/hi-its-matte/" target="_blank" class="social-btn github">GitHub</a>
     </div>
 
    
